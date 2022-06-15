@@ -1,0 +1,40 @@
+{
+  "readmeUrl": "https://github.com/dotsehyde/dotsehyde",
+  "title": "Benjamin.",
+  "name": "Benjamin Dotse",
+  "ascii": "liveterm",
+  "social": {
+    "github": "https://github.com/dotsehyde/",
+    "linkedin": "https://www.linkedin.com/in/dotsehyde/",
+    "twitter": "https://twitter.com/dotsehyde"
+  },
+  "email": "contact@email.com",
+  "ps1_hostname": "benjamin",
+  "ps1_username": "user",
+  "repo": "./public/home.html",
+  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "donate_urls": {
+    "paypal": "https://paypal.me/cveinnt",
+    "patreon": "https://patreon.com/cveinnt"
+  },
+  "colors": {
+    "light": {
+      "background": "#FBF1C9",
+      "foreground": "#3C3836",
+      "yellow": "#D79921",
+      "green": "#98971A",
+      "gray": "#7C6F64",
+      "blue": "#458588",
+      "red": "#CA2124"
+    },
+    "dark": {
+      "background": "#1D2330",
+      "foreground": "#E5E9F0",
+      "yellow": "#5E81AC",
+      "green": "#A3BE8C",
+      "gray": "#88C0D0",
+      "blue": "#EBCB8B",
+      "red": "#BF616A"
+    }
+  }
+}

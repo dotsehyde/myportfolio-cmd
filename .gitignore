@@ -2,3 +2,5 @@
 demo/
 install/
 node_modules/
+out/
+.vercel

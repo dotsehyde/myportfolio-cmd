@@ -11,8 +11,8 @@
   "email": "contact@email.com",
   "ps1_hostname": "benjamin",
   "ps1_username": "user",
-  "repo": "./public/home.html",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "repo": "https://dotsehyde.github.io/gui/index.html",
+  "resume_url": "https://dotsehyde.github.io/cv.pdf",
   "donate_urls": {
     "paypal": "https://paypal.me/cveinnt",
     "patreon": "https://patreon.com/cveinnt"

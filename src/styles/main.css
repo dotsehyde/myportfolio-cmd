@@ -1,0 +1,9 @@
+.fa.fa-phone.fa-fw:hover {
+  color: #ffffff;
+}
+
+.line {
+  width: 50%;
+  border-radius: 4px;
+  height: 5px !important;
+}

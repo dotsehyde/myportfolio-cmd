@@ -2,30 +2,55 @@
 
 import * as bin from './index';
 import config from '../../../config.json';
+import profile from './sumfetch';
 
 
 // Help
 export const help = async (args: string[]): Promise<string> => {
-  const commands = Object.keys(bin).sort().join(', ');
-  var c = '';
+  const commands = Object.keys(bin).sort().join(',\n ');
+  var c = '\n';
   for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
     if (i % 7 === 0) {
-      c += Object.keys(bin).sort()[i - 1] + '\n';
+      c += Object.keys(bin).sort()[i - 1] + ',\n';
     } else {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
-\n${c}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'profile' to display profile.
-`;
+  //   return `Welcome! Here are all the available commands:
+  // \n${c}\n
+  // [tab]: trigger completion.
+  // [ctrl+l]/clear: clear terminal.\n
+  // Type 'profile' to display profile.
+  // `;
+  return `
+  about - a full profile about me
+  banner - startup page
+  bing - search on bing eg. 'bing house'
+  cd - change directory
+  cv - download my CV
+  date - display current date
+  duckduckgo - search on duckduckgo eg. 'duckduckgo car'
+  echo - print out something eg. 'echo Hello World'
+  email - send me an email
+  github - visit my github profile
+  google - search on google eg. 'google phone'
+  gui - visit GUI version
+  help - display list of avaliable commands
+  linkedin - visit my linkedin profile
+  ls - list directories/files
+  profile - display summary about me
+  projects - view all my projects
+  quote - display daily quote
+  readme - display my readme file
+  reddit - search on reddit eg. 'reddit hacking'
+  sudo - Hmmm... out of bounds
+  twitter - visit my twitter profile
+  `;
 };
 
 //  GUI Version
 export const gui = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
+  window.open(`${config.repo}`, "_self");
   return 'Opening GUI Version...';
 };
 
@@ -33,10 +58,10 @@ export const gui = async (args: string[]): Promise<string> => {
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, Welcome to my website!
 
-I am a software engineer with over 2 years of experience
-and strong knowledgw in moile app development.
-I have been passionate about computer programming since I was 15 years old.
-I have successfully developed web apps and cross-platform mobile apps for clients.
+I am a dedicated learner with experience from building mobile apps.
+Patient and diligent with a passion for creating the best user experience possible.
+I started my  developer career 3 years ago with deep interest in making mobile apps 
+to solve problems our societies face. 
 
 Languages & Frameworks:
 <div style=" display: inline-flex; margin: 5px 0px; margin-bottom: 10px; font-size: 30px;">
@@ -72,13 +97,13 @@ export const cv = async (args: string[]): Promise<string> => {
 };
 
 // Donate
-export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
-`;
-};
+// export const donate = async (args: string[]): Promise<string> => {
+//   return `thank you for your interest. 
+// here are the ways you can support my work:
+// - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
+// - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
+// `;
+// };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
@@ -88,13 +113,11 @@ export const email = async (args: string[]): Promise<string> => {
 
 export const github = async (args: string[]): Promise<string> => {
   window.open(`${config.social.github}`);
-
   return 'Opening github...';
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {
   window.open(`${config.social.linkedin}`);
-
   return 'Opening linkedin...';
 };
 
@@ -107,7 +130,7 @@ export const twitter = async (args: string[]): Promise<string> => {
 //Readme
 export const readme = async (args: string[]): Promise<string> => {
   window.open(`${config.readmeUrl}`);
-  return 'Opening twitter...';
+  return 'Opening ReadMe...';
 };
 
 // Search
@@ -141,16 +164,14 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
+  return `
+  private let files:[String] = []
+  Sorry! my files are private.🕵️‍♂️
+  `;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `👀 You are not allowed to change directory.⚔️`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -158,24 +179,16 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
+  return `woah, did you mean vim?.`;
 };
 
 export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
-};
-
-export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
-};
-
-export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
+  return `You are a 👨‍💻`;
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+  // window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
+  return `Permission denied:😔 `;
 };
 
 // Banner

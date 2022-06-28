@@ -9,19 +9,15 @@ const profile = async (args: string[]): Promise<string> => {
             <div>
         My Profile
        -----------
-        ABOUT
+        ABOUT ME
         ${config.name}
         <u><a href="${config.resume_url}" target="_blank">Download CV</a></u>
        爵 <u><a href="${config.repo}" target="_blank">Open GUI Version</a></u>
        -----------
-        CONTACT 
+        CONTACT ME
         <u><a href="mailto:${config.email}" target="_blank">${config.email}</a></u>
         <u><a href="${config.social.github}" target="_blank">Visit My GitHub</a></u>
-        <u><a href="${config.social.linkedin}" target="_blank">View My Linkedin Profile</a></u>
-       -----------
-        DONATE 
-        <u><a href="${config.donate_urls.paypal}" target="_blank">${config.donate_urls.paypal}</a></u>
-        <u><a href="${config.donate_urls.patreon}" target="_blank">${config.donate_urls.patreon}</a></u>                                                      
+        <u><a href="${config.social.linkedin}" target="_blank">View My Linkedin Profile</a></u>                                                     
           </div>
           </div>
             `;

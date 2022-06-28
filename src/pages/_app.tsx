@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/global.css';
+import '../styles/main.css';
+import '../styles/fontawesome5-overrides.min.css'
 import Head from 'next/head';
 
 const App = ({ Component, pageProps }) => {
